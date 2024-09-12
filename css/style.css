@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    width: 75%;
+    margin: 0 auto;
+}
+.header {
+    background-color: #02570c;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header-content img {
+    max-height: 100%;
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+.sticky + .header-content {
+    padding-top: 102px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+.home {
+    background-image: url("../img/locatie2.jpg"); 
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+
+h1{
+    padding: 20px;
+}
+
+.inhoud-opleiding{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+    justify-content: center;
+}
+.items-opleiding{
+    display: grid;
+    justify-content: center;
+}
+.inhoud-blok{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+    justify-content: center;
+}
+.items-blok{
+    display: grid;
+    justify-content: center;
+}
+.rooster{
+    background-color: rgba(128, 128, 128, 0.7);
+    padding: 40px;
+}
+.inhoud-rooster{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+    justify-content: center;
+}
+.items-rooster{
+    display: grid;
+    justify-content: center;
+}
+.vakken{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-gap: 100px;
+}
+.vak{
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 20px;
+}
+.leraren{
+    background-color: lightgray;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+.docent h2{
+    margin-left: 60px;
+}
+.docenten{
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    grid-gap: 20px;
+    justify-content: center;
+}
+.docent{
+    background-color: rgb(255, 255, 255);
+    border-radius: 60px;
+    display: grid;
+    justify-content: center;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+    justify-content: space-between;
+}
+.footer-items{
+    background-color: rgb(255, 255, 255);
+    border-radius: 60px;
+    display: grid;
+    justify-content: center;
+}
+.footer-items h1{ 
+    padding: 0;
+}
+.slide-in-text {
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 2s ease-out;
+}
+.slide-in-text.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+.slide-in-left {
+    transform: translateX(50%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 2s ease-out;
+}
+.slide-in-left.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+.slide-in-bottom {
+    transform: translateY(50%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 2s ease-out;
+}
+.slide-in-bottom.slide-in {
+    transform: translateY(0);
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .header-content img {
+        max-width: 50px;
+        margin-right: 10px;
+    }
+    
+    .inhoud-opleiding {
+        grid-template-columns: 100%;
+    }
+    .items-opleiding img, .items-blok img, .items-rooster img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .inhoud-blok,
+    .inhoud-rooster {
+        grid-template-columns: 100%;
+    }
+
+    .vakken {
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+    }
+    .docenten {
+        grid-template-columns: 50% 50%;
+    }
+
+    .slide-in-text,
+    .slide-in-left,
+    .slide-in-bottom {
+        transform: none;
+        opacity: 1;
+    }
+}
